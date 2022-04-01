@@ -20,18 +20,18 @@ export async function getAllPosts() {
     `
     query allPosts {
       posts(orderBy: date_DESC, first: 20) {
-        id,
-        title,
-        excerpt,
+        id
+        title
+        excerpt
         author {
-          name,
+          name
           picture {
             url
           }
         }
-        publishedAt,
-        slug,
-        tags,
+        publishedAt
+        slug
+        tags
         coverImage {
           url
         }
@@ -59,12 +59,15 @@ export async function getSinglePostBySlug(slug: string) {
       post(where: {slug: $slug}, stage: PUBLISHED) { 
         title
         publishedAt
-        tags,
+        tags
+        slug
+        excerpt
         coverImage {
           url
-        },
+        }
         content {
           html
+          markdown
         }
       }
     }

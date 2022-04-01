@@ -1,7 +1,23 @@
 .wrapper {
-  @apply container mx-auto;
+  @apply container mx-auto px-4 lg:px-[10rem];
 }
 
-.featuredImage {
-  @apply relative w-full h-96;
+.postHeader {
+  @apply w-full lg:max-w-full lg:flex my-8 gap-8;
+}
+
+.postTitle {
+  @apply w-full;
+}
+
+.postTitle h2 {
+  @apply my-4 text-4xl font-semibold;
+}
+
+.postImage {
+  @apply relative h-80 lg:h-96 lg:w-2/4 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden;
+}
+
+.postContent {
+  @apply my-16;
 }

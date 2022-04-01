@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +10,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Rubik', sans-serif;
+  @apply bg-dark text-neutral-200;
+  background-image: url(../assets/images/bg.png) ;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+footer {
+  @apply text-center mt-[10rem] mb-[2rem] text-lg;
 }
 
 a {
@@ -21,17 +30,26 @@ a {
   box-sizing: border-box;
 }
 
+h1 {
+  @apply font-medium text-3xl py-2;
+}
+
+h2 {
+  @apply font-medium text-2xl py-2;
+}
+
+p {
+  @apply text-lg py-2;
+}
+
+pre {
+  font-family: 'Fira Code', monospace;
+  @apply bg-neutral-900 rounded-md p-5 font-light text-sm text-neutral-300;
+}
+
 .navigation {
   display: block;
   @apply container mx-auto flex flex-wrap flex-row justify-between items-center py-12 border-b border-zinc-900;
-}
-
-.logo {
-  @apply flex flex-col text-center;
-}
-
-.logo span {
-  @apply text-xl font-bold font-plex lowercase text-teal-300;
 }
 
 .menu ul {
@@ -44,4 +62,29 @@ a {
 
 .menu a:last-child {
   @apply mr-0;
+}
+
+
+.presentation {
+  @apply container mx-auto flex flex-col lg:flex-row justify-center lg:columns-2 lg:gap-[80px] my-[4rem];
+}
+
+.presentation-text {
+  @apply w-full flex flex-col justify-center;
+}
+
+.presentation-text h2 {
+  @apply text-4xl lg:text-5xl font-bold;
+}
+
+.presentation-text p {
+  @apply mt-3 text-base lg:text-lg;
+}
+
+.presentation-image {
+  @apply w-full flex justify-center;
+}
+
+.presentation-image img {
+  @apply w-4/5 rounded-full;
 }

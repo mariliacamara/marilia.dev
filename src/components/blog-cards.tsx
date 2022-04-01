@@ -17,9 +17,9 @@ const BlogCard: any = ({
         <CoverImage slug={slug} title={title} url={coverImage.url} />
       </div>
       <div className="cardInfo py-8">
-        <ul>
+        <ul className="cardTags flex flex-row gap-2 mb-4">
           {tags.map((tag: any) => (
-            <li key={tag}>{tag}</li>
+            <li key={tag} className="px-2 py-1 rounded-lg text-sm text-dark bg-teal-300">{tag}</li>
           ))}
         </ul>
         <h3 className="mb-3 text-4xl font-medium leading-snug">
@@ -27,7 +27,7 @@ const BlogCard: any = ({
             <a className="hover:underline">{title}</a>
           </Link>
         </h3>
-        <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+        <p className="mb-8 text-lg leading-relaxed">{excerpt}</p>
         <AvatarWithDate name={author.name} picture={author.picture.url} date={date} />
       </div>
     </div>
